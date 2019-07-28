@@ -2,7 +2,7 @@
 	2. wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.2.4.tar.xz - скачиваем ядро
 	3. tar -Jxvf linux-5.2.4.tar.xz - распаковываем архив в папку
 	4. ln -s linux-5.2.4/ linux - делаем сим линк и переходим в папку (cd linux)
-	5. Устанавливаем компоненты для компиляции:  yum groupinstall "Development Tools" ncurses-devel hmaccalc zlib-devel binutils-devel elfutils-libelf-devel libssl-dev openssl-devel bc
+	5. Устанавливаем компоненты для компиляции:  yum groupinstall "Development Tools"; yum install ncurses-devel hmaccalc zlib-devel binutils-devel elfutils-libelf-devel libssl-dev openssl-devel bc
 	6. Копируем конфиг действующего ядра cp -v /boot/config-3.10.0-957.12.2.el7.x86_64 .config
 	7. make oldconfig - Запускаем команды для перечитывания настроек с действующего ядра и запихиваем в новое ядро, по умолчанию всегда нажимаем на enter или выбираем y/n
 	8. make menuconfig - затем открываем граф. Интерфейс для выбора доп. Модулей если надо
